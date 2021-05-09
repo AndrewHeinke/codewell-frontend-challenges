@@ -4,9 +4,11 @@ import App from './App.vue';
 import { routes } from './routes.js';
 import { createRouter, createWebHistory } from 'vue-router';
 
+let base = process.env.NODE_ENV === 'production' ? '/codewell-frontend-challenges/' : '/';
+
 let app = createApp(App);
 let router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    history: createWebHistory(base),
     routes: import.meta.hot ? [] : routes,
 });
 
