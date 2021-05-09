@@ -1,7 +1,9 @@
 <template>
     <main>
         <div class="container py-6">
-            <h1 class="text-6xl font-bold leading-tight mb-4">Codewell Front End Challenges</h1>
+            <h1 class="text-4xl lg:text-6xl font-bold leading-tight mb-4">
+                Codewell Front End Challenges
+            </h1>
             <p class="text-xl mb-8">A site to show all the Codwell Frontend Challenges.</p>
             <ul>
                 <li>

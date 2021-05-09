@@ -3,10 +3,10 @@
         <div class="gradie-desktop-bg h-full flex lg:items-center lg:p-4">
             <div class="gradie block lg:flex w-full lg:max-w-6xl mx-auto">
                 <section
-                    class="flex-1 bg-gray-900 text-center gradie-bg h-full lg:h-auto px-4 lg:px-0 py-12 lg:rounded-l-xl"
+                    class="flex-1 bg-gray-900 text-center gradie-bg lg:h-auto px-4 lg:px-0 py-12 lg:rounded-l-xl"
                 >
                     <h1 class="text-white font-bold text-5xl mb-4">Gradie</h1>
-                    <p class="text-white text-lg md:text-xl text-blue-200">
+                    <p class="text-white text-lg lg:text-xl text-blue-200">
                         Beautiful gradients in seconds.
                     </p>
                 </section>

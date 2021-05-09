@@ -26,4 +26,11 @@ main {
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+@media (min-width: 1024px) {
+    .gradie-bg {
+        min-height: unset;
+    }
 }
