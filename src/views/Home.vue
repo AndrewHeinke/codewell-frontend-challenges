@@ -42,6 +42,25 @@
                         </div>
                     </div>
                 </li>
+                <li>
+                    <div class="max-w-lg w-full rounded-lg border border-gray-300 p-4 mb-4">
+                        <h3 class="font-semibold text-lg tracking-wide">Gradie Sign Up Page</h3>
+                        <p class="text-gray-500 my-1">
+                            Gradie is a simple sign up page, great to practice centering layouts and
+                            absolute positioning.
+                        </p>
+                        <div class="mt-2">
+                            <router-link to="/Challenge3">
+                                <a
+                                    class="text-blue-700 inline-flex items-center font-semibold tracking-wide"
+                                >
+                                    <span class="hover:underline">View Demo</span>
+                                    <span class="text-xl ml-2">&#8594;</span>
+                                </a>
+                            </router-link>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </main>

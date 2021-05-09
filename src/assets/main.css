@@ -7,3 +7,23 @@
 .body {
     height: 100vh;
 }
+
+main {
+    height: calc(100% - 64px);
+}
+
+.gradie-desktop-bg {
+    background-image: url('/img/gradie/background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.gradie-bg {
+    --tw-bg-opacity: 1;
+    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+    background-image: url('/img/gradie/iphone-mockup.png');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
