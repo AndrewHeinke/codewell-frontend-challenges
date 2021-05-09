@@ -53,7 +53,7 @@
                     >
                         <!-- Menu open: "hidden", Menu closed: "block" -->
                         <svg
-                            class="block h-6 w-6"
+                            :class="!showMenu ? 'block h-6 w-6' : 'hidden h-6 w-6'"
                             stroke="currentColor"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -67,7 +67,7 @@
                         </svg>
                         <!-- Menu open: "block", Menu closed: "hidden" -->
                         <svg
-                            class="hidden h-6 w-6"
+                            :class="showMenu ? 'block h-6 w-6' : 'hidden h-6 w-6'"
                             stroke="currentColor"
                             fill="none"
                             viewBox="0 0 24 24"
@@ -124,7 +124,6 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     data: () => ({
         showMenu: false,
-        showProfileMenu: false,
         links: [
             { text: 'Challenge 1', to: '/Challenge1' },
             { text: 'Challenge 2', to: '/Challenge2' },
