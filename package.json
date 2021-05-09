@@ -1,0 +1,39 @@
+{
+  "name": "codewell-frontend-challenges",
+  "version": "1.0.0",
+  "description": "https://www.codewell.cc/challenges",
+  "author": "Andrew Heinke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewHeinke/codewell-frontend-challenges/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "cross-env NODE_ENV=production vite build && npm run copy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "copy": "cpy \"dist/index.html\" dist --rename=\"404.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewHeinke/codewell-frontend-challenges.git"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.0",
+    "vue": "^3.0.7",
+    "vue-router": "^4.0.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.7",
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vue/compiler-sfc": "^3.0.7",
+    "autoprefixer": "^10.2.5",
+    "cpy-cli": "^3.1.1",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^3.1.0",
+    "postcss": "^8.2.8",
+    "tailwindcss": "^2.0.4",
+    "vite": "^2.0.5"
+  },
+  "homepage": "https://AndrewHeinke.github.io/codewell-frontend-challenges"
+}
