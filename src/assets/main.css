@@ -21,10 +21,10 @@ input::-moz-placeholder {
 
 /* gradie challenge specific styles */
 .gradie-desktop-bg {
-    background: url('/img/gradie/background.png'), rgba(251, 207, 232, 1);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: radial-gradient(farthest-side at bottom left, rgba(241, 155, 131, 1), transparent),
+        radial-gradient(farthest-side at top left, rgba(238, 125, 161, 1), transparent),
+        radial-gradient(farthest-corner at bottom right, rgba(247, 214, 162, 1), transparent),
+        #fffcf7;
 }
 
 .gradie-bg {
