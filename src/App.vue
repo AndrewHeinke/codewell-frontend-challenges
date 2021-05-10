@@ -1,25 +1,18 @@
 <template>
-    <nav class="bg-gray-800 border-b border-gray-600">
+    <nav class="main-nav">
         <div class="container">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center overflow-x-auto">
                     <div class="flex-shrink-0">
-                        <router-link
-                            class="p-2 block fill-current text-gray-300 hover:bg-gray-700 rounded-md focus:outline-none focus:bg-gray-700 focus:text-white hover:text-whites"
-                            to="/"
-                        >
-                            <svg
-                                class="h-8 w-8"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 242.41 323.21"
-                            >
+                        <router-link class="main-nav-logo" to="/">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242.41 323.21">
                                 <path
                                     d="M161.6 80.8v80.8H80.8V80.8H0v242.41h80.8v-80.8h80.8v80.8h80.81V80.8H161.6zM80.8 0h80.8v80.8H80.8z"
                                 />
                             </svg>
                         </router-link>
                     </div>
-                    <div class="hidden md:block">
+                    <div class="hidden md:block py-8 pr-8">
                         <div class="ml-4 flex items-baseline">
                             <router-link
                                 v-for="(link, i) in links"
@@ -33,9 +26,7 @@
                                     @click="navigate"
                                     class="px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap"
                                     :class="[
-                                        isExactActive
-                                            ? 'text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700'
-                                            : 'text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700',
+                                        isExactActive ? 'nav-link nav-link--active' : 'nav-link',
                                         i > 0 && 'ml-4',
                                     ]"
                                     >{{ link.text }}</a

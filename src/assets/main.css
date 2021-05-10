@@ -4,8 +4,20 @@
 
 @import 'tailwindcss/utilities';
 
+:root {
+    --bg-color: #eeeeee;
+    --shadow-light: #ffffff;
+    --shadow-dark: #cacaca;
+    --text-color: #6b7280;
+    --link-color: #6d28d9;
+}
+
 .body {
     height: 100vh;
+}
+
+html {
+    overflow-y: scroll;
 }
 
 main {
@@ -19,41 +31,85 @@ input::-moz-placeholder {
     @apply text-gray-200;
 }
 
-.stretched-link::after {
-    content: '';
-    @apply z-10 absolute inset-0 bg-transparent pointer-events-auto;
+/* nav styles */
+.main-nav {
+    background-color: var(--bg-color);
 }
 
-/* homepage card styles */
+.main-nav-logo {
+    @apply p-2 block rounded-md focus:outline-none;
+
+    transition: box-shadow 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+    background: var(--bg-color);
+    box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
+        inset 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px var(--shadow-light);
+}
+
+.main-nav-logo:focus,
+.main-nav-logo:hover {
+    box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
+        inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+}
+
+.main-nav-logo svg {
+    @apply h-8 w-8;
+    fill: var(--link-color);
+}
+
+.nav-link {
+    @apply focus:outline-none;
+    border-radius: 0.25rem;
+    outline: none;
+    border: none;
+    position: relative;
+    color: var(--link-color);
+    background: var(--bg-color);
+}
+
+.nav-link.nav-link--active {
+    box-shadow: -4px -2px 4px 0px var(--shadow-light), 4px 2px 6px 0px var(--shadow-dark);
+}
+
+.nav-link:hover:after,
+.nav-link--active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 2px 0px var(--shadow-dark) inset,
+        -2px -2px 2px 0px var(--shadow-light) inset;
+}
+
+/* homepage styles */
 .homepage {
-    background-color: #eeeeee;
+    background-color: var(--bg-color);
     height: 100%;
 }
 
 .homepage-title-section {
-    box-shadow: 0px 0px 0px #bdbdbd, 0px 0px 0px #ffffff, inset 4px 4px 8px #bdbdbd,
-        inset -4px -4px 8px #ffffff;
-    background-color: #eeeeee;
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
+        inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+}
+
+.homepage-title-heading {
+    @apply text-4xl lg:text-6xl font-bold leading-tight mb-4;
+    color: var(--text-color);
 }
 
 .card-container {
-    background-color: #eeeeee;
-    box-shadow: -2px -2px 4px 0px #ffffff, 50px 50px 50px 0px rgb(0 0 0 / 25%);
-}
-
-.morph {
-    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
-        4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001,
-        inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
-    background-color: #eeeeee;
+    background-color: var(--bg-color);
+    box-shadow: -2px -2px 4px 0px var(--shadow-light), 50px 50px 50px 0px var(--shadow-dark);
 }
 
 .homepage-card {
-    box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002,
-        4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001,
-        inset 0px 0px 0px 0px #fff9, inset 0px 0px 0px 0px #0001;
+    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light),
+        inset 0px 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px 0px var(--shadow-light);
     transition: box-shadow 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
-    background-color: #eeeeee;
+    background-color: var(--bg-color);
     cursor: pointer;
     border: none;
     position: relative;
@@ -61,9 +117,55 @@ input::-moz-placeholder {
 
 .homepage-card:hover,
 .homepage-card:focus-within {
-    box-shadow: 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #fff9, 0px 0px 0px 0px #0001,
-        0px 0px 0px 0px #0001, inset -7px -7px 20px 0px #fff9, inset -4px -4px 5px 0px #fff9,
-        inset 7px 7px 20px 0px #0003, inset 4px 4px 5px 0px #0001;
+    box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
+        inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+}
+
+.homepage-card-link {
+    @apply inline-flex items-center font-semibold text-lg cursor-pointer outline-none;
+    color: var(--link-color);
+}
+
+.homepage-card-link::after {
+    content: '';
+    @apply z-10 absolute inset-0 bg-transparent pointer-events-auto;
+}
+
+.homepage-card-text {
+    @apply my-1;
+    color: var(--text-color);
+}
+
+.stretched-link::after {
+    content: '';
+    @apply z-10 absolute inset-0 bg-transparent pointer-events-auto;
+}
+
+.morph-btn {
+    border-radius: 1rem;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    outline: none;
+    margin: 0 0.5rem;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
+    background: var(--bg-color);
+    box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light),
+        inset 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px var(--shadow-light);
+}
+
+.morph-btn:hover,
+.morph-btn:focus {
+    box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
+        inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+}
+
+.morph-btn svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--link-color);
 }
 
 /* gradie challenge specific styles */
