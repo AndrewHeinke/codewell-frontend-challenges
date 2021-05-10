@@ -115,7 +115,7 @@
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full lg:w-1/2 xl:w-3/5 px-4 order-2 lg:order-1">
                         <h1 class="text-4xl font-bold md:text-5xl xl:text-6xl mb-4 max-w-2xl">
-                            Share your unflitered thoughts. Get paid.
+                            Share your unfiltered thoughts. Get paid.
                         </h1>
                         <p class="text-lg max-w-2xl">
                             Spense is an open platform for individuals to share their unfiltered

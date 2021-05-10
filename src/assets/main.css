@@ -21,7 +21,7 @@ input::-moz-placeholder {
 
 /* gradie challenge specific styles */
 .gradie-desktop-bg {
-    background-image: url('/img/gradie/background.png');
+    background: url('/img/gradie/background.png'), rgba(251, 207, 232, 1);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -90,7 +90,7 @@ input::-moz-placeholder {
 }
 
 .spense-phone-callout-img {
-    background-image: url(/img/spense/phone-mockup.png);
+    background-image: url('/img/spense/phone-mockup.png');
     background-size: cover;
     background-position: center right -35px;
     background-repeat: no-repeat;
