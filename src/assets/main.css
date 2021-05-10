@@ -12,6 +12,13 @@ main {
     height: calc(100% - 64px);
 }
 
+input::-webkit-input-placeholder {
+    @apply text-gray-200;
+}
+input::-moz-placeholder {
+    @apply text-gray-200;
+}
+
 /* gradie challenge specific styles */
 .gradie-desktop-bg {
     background-image: url('/img/gradie/background.png');
@@ -80,6 +87,29 @@ main {
     display: inline-block;
     -webkit-animation: slidein 100s linear infinite;
     animation: slidein 100s linear infinite;
+}
+
+.spense-phone-callout-img {
+    background-image: url(/img/spense/phone-mockup.png);
+    background-size: cover;
+    background-position: center right -35px;
+    background-repeat: no-repeat;
+    height: 240px;
+    width: 270px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .spense-phone-callout-img {
+        background-size: 95%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
 
 .spense-logos img {

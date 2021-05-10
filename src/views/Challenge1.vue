@@ -114,7 +114,7 @@
             <div class="container">
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full lg:w-1/2 xl:w-3/5 px-4 order-2 lg:order-1">
-                        <h1 class="text-4xl md:text-5xl xl:text-6xl mb-4 max-w-2xl">
+                        <h1 class="text-4xl font-bold md:text-5xl xl:text-6xl mb-4 max-w-2xl">
                             Share your unflitered thoughts. Get paid.
                         </h1>
                         <p class="text-lg max-w-2xl">
@@ -127,6 +127,25 @@
                             <li>Get paid via Debit Card, ACH, or Paypal.</li>
                             <li>Withdraw your earnings anytime.</li>
                         </ul>
+                        <form action="#" method="POST" onsubmit="return false;" autocomplete="off">
+                            <div class="flex max-w-lg">
+                                <label for="email-input" class="sr-only">Email</label>
+                                <input
+                                    name="email-input"
+                                    id="email-input"
+                                    type="email"
+                                    required
+                                    placeholder="john@example.com"
+                                    class="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 appearance-none text-lg"
+                                />
+                                <button
+                                    type="submit"
+                                    class="rounded-md border border-transparent shadow-sm px-4 py-2 bg-gray-900 text-lg font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 flex-shrink-0 ml-4"
+                                >
+                                    Get Started
+                                </button>
+                            </div>
+                        </form>
                     </div>
                     <div class="w-full lg:w-1/2 xl:w-2/5 px-4 order-1 lg:order-2 mb-8 lg:mb-0">
                         <div class="spense-hero rounded-xl w-full relative">
@@ -147,7 +166,7 @@
                 </div>
             </div>
         </div>
-        <div class="overflow-x-hidden py-8">
+        <div class="overflow-x-hidden py-12 bg-white">
             <div class="relative translate-x-1/2">
                 <div class="spense-logos">
                     <img src="/img/spense/facebook-logo.png" alt="Facebook Logo" />
@@ -169,6 +188,162 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="bg-gray-100 rounded-xl relative p-4 md:p-8 lg:p-12 xl:p-20 pb-0 md:pb-0">
+                <div class="max-w-2xl xl:py-8">
+                    <h2 class="text-3xl md:text-4xl xl:text-5xl mb-4 max-w-lg font-bold">
+                        Secure your money with Escrow.
+                    </h2>
+                    <p class="text-lg max-w-lg mb-8">
+                        Spense uses Escrow to secure all payments. We believe Escrow offers the
+                        highest level of security for your payments, so you never need to worry
+                        about scames.
+                    </p>
+                    <a
+                        class="text-gray-700 inline-flex items-center font-semibold tracking-wide underline cursor-pointer"
+                        href="javascript:;"
+                    >
+                        Learn more about Escrow &#8594;
+                    </a>
+                </div>
+
+                <div class="spense-phone-callout-img"></div>
+            </div>
+        </div>
+        <div class="container py-16">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-1/2 px-4 order-2 lg:order-1">
+                    <img src="/img/spense/text-editor.png" alt="" />
+                </div>
+                <div class="w-full lg:w-1/2 px-4 order-1 lg:order-2 flex items-center">
+                    <div class="max-w-2xl xl:py-8 mb-8 lg:mb-0">
+                        <h2 class="text-3xl md:text-4xl xl:text-5xl mb-4 font-bold">
+                            A text editor like no other.
+                        </h2>
+                        <p class="text-lg max-w-lg mb-8">
+                            Our text editor pulls you into focus mode with it's simplistic design
+                            and usability so you can put out your best writings.
+                        </p>
+                        <a
+                            class="text-gray-700 inline-flex items-center font-semibold tracking-wide underline cursor-pointer"
+                            href="javascript:;"
+                        >
+                            Text Editor Live Demo &#8594;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-black">
+            <div class="container text-white">
+                <div class="flex flex-wrap -mx-4 py-8 md:py-16">
+                    <div class="w-full xl:w-1/2 px-4">
+                        <p class="font-bold text-lg mb-4">spense.</p>
+                        <p class="text-white text-opacity-80 text-lg max-w-lg">
+                            Spense is an open platform for individuals to share their unfiltered
+                            thoughts. Discuss the topics you love, and get paid for doing
+                            <em>just</em> that.
+                        </p>
+                    </div>
+                    <div class="w-full xl:w-1/2 px-4 mt-16 xl:mt-0">
+                        <div class="flex flex-wrap -mx-4">
+                            <div class="w-1/2 lg:w-1/4 px-4">
+                                <h3 class="font-bold text-lg md:text-xl mb-4">Sitemap</h3>
+                                <ul>
+                                    <li>
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >Homepage</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/4 px-4">
+                                <h3 class="font-bold text-lg md:text-xl mb-4">Resources</h3>
+                                <ul>
+                                    <li class="mb-4">
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >Support</a
+                                        >
+                                    </li>
+                                    <li class="mb-4">
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >FAQ</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/4 px-4 mt-8 lg:mt-0">
+                                <h3 class="font-bold text-lg md:text-xl mb-4">Company</h3>
+                                <ul>
+                                    <li class="mb-4">
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >About</a
+                                        >
+                                    </li>
+                                    <li class="mb-4">
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >Customer</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >Blog</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/4 px-4">
+                                <h3 class="font-bold text-lg md:text-xl mb-4 mt-8 lg:mt-0">
+                                    Opportunities
+                                </h3>
+                                <ul>
+                                    <li class="mb-4">
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >Jobs</a
+                                        >
+                                    </li>
+                                    <li class="mb-4">
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >Customer</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="text-white text-opacity-90 focus:outline-none focus:text-opacity-100 focus:underline hover:underline hover:text-opacity-100"
+                                            href="javascript:;"
+                                            >Blog</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 </template>
 
