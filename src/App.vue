@@ -12,7 +12,7 @@
                             </svg>
                         </router-link>
                     </div>
-                    <div class="hidden md:block py-8 pr-8">
+                    <div class="hidden md:block py-8 pr-4">
                         <div class="ml-4 flex items-baseline">
                             <router-link
                                 v-for="(link, i) in links"
@@ -33,6 +33,32 @@
                                 >
                             </router-link>
                         </div>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <div class="select-prepend">
+                            <svg
+                                aria-hidden="true"
+                                class="w-4 h-4"
+                                focusable="false"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <label class="sr-only" for="theme-select">Set Theme</label>
+                        <select name="theme" id="theme-select">
+                            <option value="0">Default</option>
+                            <option value="1">Blue</option>
+                            <option value="2">Green</option>
+                            <option value="3">Purple</option>
+                            <option value="4">Orange</option>
+                            <option value="5">Dark</option>
+                        </select>
                     </div>
                 </div>
 
@@ -111,6 +137,7 @@
 
 <script>
 import { defineComponent } from 'vue';
+import { colorSchemes } from './assets/color-schemes';
 
 export default defineComponent({
     data: () => ({
@@ -121,5 +148,38 @@ export default defineComponent({
             { text: 'Challenge 3', to: '/Challenge3' },
         ],
     }),
+    mounted() {
+        const myStorage = window.localStorage;
+        const root = document.documentElement;
+
+        document.getElementById('theme-select').addEventListener('change', function () {
+            populateStorage();
+        });
+
+        if (!myStorage.getItem('colorIndex')) {
+            populateStorage();
+        } else {
+            setStyles();
+        }
+
+        function setStyles() {
+            let colorIndex = myStorage.getItem('colorIndex');
+            let activeColor = colorSchemes[colorIndex];
+
+            document.getElementById('theme-select').value = colorIndex;
+
+            root.style.setProperty('--bg-color', activeColor.bgColor);
+            root.style.setProperty('--text-color', activeColor.textColor);
+            root.style.setProperty('--shadow-light', activeColor.shadowLight);
+            root.style.setProperty('--shadow-dark', activeColor.shadowDark);
+            root.style.setProperty('--link-color', activeColor.linkColor);
+        }
+
+        function populateStorage() {
+            myStorage.setItem('colorIndex', document.getElementById('theme-select').value);
+
+            setStyles();
+        }
+    },
 });
 </script>

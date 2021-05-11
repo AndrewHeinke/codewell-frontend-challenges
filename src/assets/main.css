@@ -89,6 +89,38 @@ input::-moz-placeholder {
     transition: box-shadow 500ms ease;
 }
 
+.select-wrapper {
+    @apply flex flex-wrap items-stretch w-full relative rounded-lg;
+}
+
+.select-prepend {
+    display: flex;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    justify-content: center;
+    color: var(--link-color);
+    background-color: white;
+}
+
+#theme-select {
+    @apply flex-1 relative text-sm cursor-pointer;
+    border-radius: 0.5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0.25rem 2rem 0.25rem 0;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: var(--link-color);
+    background-color: white;
+}
+
+#theme-select #theme-select::before {
+    content: '';
+}
+
 /* homepage styles */
 .homepage {
     background-color: var(--bg-color);
