@@ -3,6 +3,21 @@
         <div class="container py-6">
             <div class="homepage-title-section rounded-xl p-8 text-center mb-16">
                 <h1 class="homepage-title-heading">Codewell Front End Challenges</h1>
+                <div>
+                    <label class="sr-only" for="theme-select">Set Theme</label>
+                    <select
+                        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 max-w-xs mx-auto"
+                        name="theme"
+                        id="theme-select"
+                    >
+                        <option value="0">Theme Default</option>
+                        <option value="1">Theme Blue</option>
+                        <option value="2">Theme Green</option>
+                        <option value="3">Theme Purple</option>
+                        <option value="4">Theme Orange</option>
+                        <option value="5">Theme Dark</option>
+                    </select>
+                </div>
                 <div class="flex justify-center pt-8">
                     <a
                         class="morph-btn"
@@ -47,6 +62,18 @@
                 </div>
             </div>
             <div class="card-container rounded-xl p-8">
+                <div class="clock">
+                    <div class="hand hours"></div>
+                    <div class="hand minutes"></div>
+                    <div class="hand seconds"></div>
+                    <div class="point"></div>
+                    <div class="marker">
+                        <span class="marker__1"></span>
+                        <span class="marker__2"></span>
+                        <span class="marker__3"></span>
+                        <span class="marker__4"></span>
+                    </div>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="relative w-full rounded-lg p-4 group homepage-card">
                         <router-link to="/Challenge1" class="homepage-card-link"
@@ -154,21 +181,50 @@ const colorOptions = [
     },
 ];
 
-function generateRandomColor(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-}
+// function generateRandomColor(arr) {
+//     return arr[Math.floor(Math.random() * arr.length)];
+// }
+
+// function setSelectedIndex(s, i) {
+//     s.options[i - 1].selected = true;
+//     return;
+// }
 
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     mounted() {
-        let randomColor = generateRandomColor(colorOptions);
-        let root = document.documentElement;
-        root.style.setProperty('--bg-color', randomColor.bgColor);
-        root.style.setProperty('--text-color', randomColor.textColor);
-        root.style.setProperty('--shadow-light', randomColor.shadowLight);
-        root.style.setProperty('--shadow-dark', randomColor.shadowDark);
-        root.style.setProperty('--link-color', randomColor.linkColor);
+        const myStorage = window.localStorage;
+        const root = document.documentElement;
+
+        document.getElementById('theme-select').addEventListener('change', function () {
+            populateStorage();
+        });
+
+        if (!myStorage.getItem('colorIndex')) {
+            populateStorage();
+        } else {
+            setStyles();
+        }
+
+        function setStyles() {
+            let colorIndex = myStorage.getItem('colorIndex');
+            let activeColor = colorOptions[colorIndex];
+
+            document.getElementById('theme-select').value = colorIndex;
+
+            root.style.setProperty('--bg-color', activeColor.bgColor);
+            root.style.setProperty('--text-color', activeColor.textColor);
+            root.style.setProperty('--shadow-light', activeColor.shadowLight);
+            root.style.setProperty('--shadow-dark', activeColor.shadowDark);
+            root.style.setProperty('--link-color', activeColor.linkColor);
+        }
+
+        function populateStorage() {
+            myStorage.setItem('colorIndex', document.getElementById('theme-select').value);
+
+            setStyles();
+        }
     },
 });
 </script>

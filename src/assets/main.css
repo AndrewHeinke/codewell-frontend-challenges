@@ -34,43 +34,50 @@ input::-moz-placeholder {
 /* nav styles */
 .main-nav {
     background-color: var(--bg-color);
+    transition: 500ms;
 }
 
 .main-nav-logo {
     @apply p-2 block rounded-md focus:outline-none;
 
-    transition: box-shadow 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
     background: var(--bg-color);
     box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
         inset 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px var(--shadow-light);
+    transition: 500ms;
 }
 
 .main-nav-logo:focus,
 .main-nav-logo:hover {
     box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
         inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    transition: 500ms;
+    outline: none;
 }
 
 .main-nav-logo svg {
     @apply h-8 w-8;
     fill: var(--link-color);
+    transition: 500ms;
 }
 
 .nav-link {
     @apply focus:outline-none;
     border-radius: 0.25rem;
-    outline: none;
-    border: none;
     position: relative;
     color: var(--link-color);
     background: var(--bg-color);
+    transition: 500ms;
+    outline: transparent;
+    border: transparent;
 }
 
 .nav-link.nav-link--active {
     box-shadow: -4px -2px 4px 0px var(--shadow-light), 4px 2px 6px 0px var(--shadow-dark);
+    transition: 500ms;
 }
 
-.nav-link:hover:after,
+.nav-link:focus::after,
+.nav-link:hover::after,
 .nav-link--active::after {
     content: '';
     position: absolute;
@@ -81,49 +88,56 @@ input::-moz-placeholder {
     border-radius: 0.25rem;
     box-shadow: 2px 2px 2px 0px var(--shadow-dark) inset,
         -2px -2px 2px 0px var(--shadow-light) inset;
+    transition: 500ms;
 }
 
 /* homepage styles */
 .homepage {
     background-color: var(--bg-color);
     height: 100%;
+    transition: 500ms;
 }
 
 .homepage-title-section {
     background-color: var(--bg-color);
     box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
         inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+    transition: 500ms;
 }
 
 .homepage-title-heading {
     @apply text-4xl lg:text-6xl font-bold leading-tight mb-4;
     color: var(--text-color);
+    transition: 500ms;
 }
 
 .card-container {
     background-color: var(--bg-color);
     box-shadow: -2px -2px 4px 0px var(--shadow-light), 50px 50px 50px 0px var(--shadow-dark);
+    transition: 500ms;
 }
 
 .homepage-card {
     box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light),
         inset 0px 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px 0px var(--shadow-light);
-    transition: box-shadow 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
     background-color: var(--bg-color);
     cursor: pointer;
     border: none;
     position: relative;
+    transition: 500ms;
 }
 
 .homepage-card:hover,
 .homepage-card:focus-within {
     box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
         inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+    transition: 300ms;
 }
 
 .homepage-card-link {
     @apply inline-flex items-center font-semibold text-lg cursor-pointer outline-none;
     color: var(--link-color);
+    transition: 500ms;
 }
 
 .homepage-card-link::after {
@@ -134,6 +148,7 @@ input::-moz-placeholder {
 .homepage-card-text {
     @apply my-1;
     color: var(--text-color);
+    transition: 500ms;
 }
 
 .stretched-link::after {
@@ -150,22 +165,24 @@ input::-moz-placeholder {
     margin: 0 0.5rem;
     justify-content: center;
     align-items: center;
-    transition: box-shadow 0.3s cubic-bezier(0.79, 0.21, 0.06, 0.81);
     background: var(--bg-color);
     box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light),
         inset 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px var(--shadow-light);
+    transition: 500ms;
 }
 
 .morph-btn:hover,
 .morph-btn:focus {
     box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
         inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    transition: 300ms;
 }
 
 .morph-btn svg {
     width: 2rem;
     height: 2rem;
     fill: var(--link-color);
+    transition: 500ms;
 }
 
 /* gradie challenge specific styles */
