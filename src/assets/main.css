@@ -105,7 +105,7 @@ input::-moz-placeholder {
 }
 
 #theme-select {
-    @apply flex-1 relative text-sm cursor-pointer;
+    @apply flex-1 relative text-base cursor-pointer;
     border-radius: 0.5rem;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

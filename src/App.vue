@@ -24,7 +24,7 @@
                                 <a
                                     :href="href"
                                     @click="navigate"
-                                    class="px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap"
+                                    class="px-3 py-2 rounded-md text-base font-medium whitespace-nowrap"
                                     :class="[
                                         isExactActive ? 'nav-link nav-link--active' : 'nav-link',
                                         i > 0 && 'ml-4',
