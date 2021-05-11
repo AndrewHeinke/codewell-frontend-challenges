@@ -12,10 +12,13 @@
     --link-color: #6d28d9;
 }
 
-html,
+html {
+    overflow-y: scroll;
+    height: 100%;
+}
+
 body,
 .body {
-    overflow-y: scroll;
     height: 100%;
 }
 
@@ -114,15 +117,21 @@ input::-moz-placeholder {
 }
 
 .select-wrapper {
-    @apply flex flex-wrap items-stretch ml-auto mr-8 md:mr-0 relative rounded-lg shadow;
-    background: white;
-    width: 120px;
+    @apply flex flex-wrap items-stretch ml-auto mr-4 md:mr-0 relative rounded-lg;
+    background: var(--bg-color);
+    box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light),
+        inset 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px var(--shadow-light);
+    transition: background 500ms ease, box-shadow 500ms ease;
+    width: 130px;
     display: flex;
+    padding: 0.25rem 0;
     justify-content: space-between;
 }
 
 .select-wrapper:focus-within {
-    box-shadow: 0 0 0 2px var(--bg-color), 0 0 0 4px var(--link-color);
+    box-shadow: 0 0 0 2px var(--link-color), 5px 5px 10px var(--shadow-dark),
+        -5px -5px 10px var(--shadow-light), inset 0px 0px 0px var(--shadow-dark),
+        inset 0px 0px 0px var(--shadow-light);
 }
 
 .light-theme .select-prepend,
@@ -137,7 +146,7 @@ input::-moz-placeholder {
     align-items: center;
     padding: 0.5rem 0.5rem;
     justify-content: center;
-    color: var(--bg-color);
+    color: var(--text-color);
     background-color: transparent;
     height: 100%;
 }
@@ -149,7 +158,7 @@ input::-moz-placeholder {
     align-items: center;
     padding: 0.5rem 0.5rem;
     justify-content: center;
-    color: var(--bg-color);
+    color: var(--text-color);
     background-color: transparent;
     height: 100%;
 }
@@ -172,7 +181,7 @@ input::-moz-placeholder {
     outline: none;
     border: none;
     box-shadow: none;
-    color: var(--bg-color);
+    color: var(--text-color);
     width: 100%;
     background-image: none;
     background-color: transparent;
@@ -229,8 +238,9 @@ input::-moz-placeholder {
 .card-container {
     background-color: var(--bg-color);
     margin-bottom: 4rem;
-    box-shadow: -2px -2px 4px 0px var(--shadow-light), 50px 50px 50px 0px var(--shadow-dark);
+    box-shadow: -2px -2px 4px 0px var(--shadow-light), 0px 40px 40px 0px var(--shadow-dark);
     transition: background-color 500ms ease, box-shadow 500ms ease;
+    z-index: 10;
 }
 
 .homepage-card {

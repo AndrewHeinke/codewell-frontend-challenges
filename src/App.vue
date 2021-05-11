@@ -58,12 +58,14 @@
                         </div>
                         <label class="sr-only" for="theme-select">Set Theme</label>
                         <select name="theme" id="theme-select">
-                            <option value="0">Light</option>
-                            <option value="1">Blue</option>
-                            <option value="2">Green</option>
-                            <option value="3">Purple</option>
-                            <option value="4">Orange</option>
-                            <option value="5">Dark</option>
+                            <optgroup label="Theme">
+                                <option value="0">Light</option>
+                                <option value="1">Blue</option>
+                                <option value="2">Green</option>
+                                <option value="3">Purple</option>
+                                <option value="4">Orange</option>
+                                <option value="5">Dark</option>
+                            </optgroup>
                         </select>
                         <div class="select-append">
                             <svg
