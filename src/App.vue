@@ -1,8 +1,8 @@
 <template>
     <nav class="main-nav">
         <div class="container">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center overflow-x-auto">
+            <div class="flex items-center h-16">
+                <div class="flex items-center w-full">
                     <div class="flex-shrink-0">
                         <router-link class="main-nav-logo" to="/">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242.41 323.21">
@@ -24,7 +24,14 @@
                                 <a
                                     :href="href"
                                     @click="navigate"
-                                    class="px-3 py-2 rounded-md text-base font-medium whitespace-nowrap"
+                                    class="
+                                        px-3
+                                        py-2
+                                        rounded-md
+                                        text-base
+                                        font-medium
+                                        whitespace-nowrap
+                                    "
                                     :class="[
                                         isExactActive ? 'nav-link nav-link--active' : 'nav-link',
                                         i > 0 && 'ml-4',
@@ -34,7 +41,6 @@
                             </router-link>
                         </div>
                     </div>
-
                     <div class="select-wrapper">
                         <div class="select-prepend">
                             <svg
@@ -52,7 +58,7 @@
                         </div>
                         <label class="sr-only" for="theme-select">Set Theme</label>
                         <select name="theme" id="theme-select">
-                            <option value="0">Default</option>
+                            <option value="0">Light</option>
                             <option value="1">Blue</option>
                             <option value="2">Green</option>
                             <option value="3">Purple</option>
@@ -62,12 +68,9 @@
                     </div>
                 </div>
 
-                <div class="-mr-2 flex md:hidden">
+                <div class="flex md:hidden">
                     <!-- Mobile menu button -->
-                    <button
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
-                        @click="showMenu = !showMenu"
-                    >
+                    <button class="mobile-menu-btn" @click="showMenu = !showMenu">
                         <!-- Menu open: "hidden", Menu closed: "block" -->
                         <svg
                             :class="!showMenu ? 'block h-6 w-6' : 'hidden h-6 w-6'"
@@ -165,8 +168,14 @@ export default defineComponent({
         function setStyles() {
             let colorIndex = myStorage.getItem('colorIndex');
             let activeColor = colorSchemes[colorIndex];
-
+            let selectWrapper = document.querySelector('.select-wrapper');
             document.getElementById('theme-select').value = colorIndex;
+
+            if (colorIndex === '0') {
+                selectWrapper.classList.add('light-theme');
+            } else {
+                selectWrapper.classList.remove('light-theme');
+            }
 
             root.style.setProperty('--bg-color', activeColor.bgColor);
             root.style.setProperty('--text-color', activeColor.textColor);

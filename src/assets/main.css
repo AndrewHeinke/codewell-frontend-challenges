@@ -90,7 +90,15 @@ input::-moz-placeholder {
 }
 
 .select-wrapper {
-    @apply flex flex-wrap items-stretch w-full relative rounded-lg;
+    @apply flex flex-wrap items-stretch ml-auto mr-8 md:mr-0 relative rounded-lg shadow-sm;
+}
+
+.select-wrapper:focus-within {
+    box-shadow: 0 0 0 2px var(--bg-color), 0 0 0 4px var(--link-color);
+}
+
+.light-theme .select-prepend {
+    color: var(--text-color) !important;
 }
 
 .select-prepend {
@@ -100,8 +108,12 @@ input::-moz-placeholder {
     align-items: center;
     padding: 0.25rem 0.5rem;
     justify-content: center;
-    color: var(--link-color);
+    color: var(--bg-color);
     background-color: white;
+}
+
+.light-theme #theme-select {
+    color: var(--text-color) !important;
 }
 
 #theme-select {
@@ -113,12 +125,37 @@ input::-moz-placeholder {
     outline: none;
     border: none;
     box-shadow: none;
-    color: var(--link-color);
+    color: var(--bg-color);
     background-color: white;
 }
 
-#theme-select #theme-select::before {
+.mobile-menu-btn {
+    @apply inline-flex items-center justify-center p-2 rounded-md;
+    color: var(--text-color);
+    background: var(--bg-color);
+    box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light),
+        inset 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px var(--shadow-light);
+    transition: background 500ms ease, box-shadow 500ms ease;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.mobile-menu-btn:hover::after,
+.mobile-menu-btn:focus::after {
     content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.25rem;
+    box-shadow: 2px 2px 2px 0px var(--shadow-dark) inset,
+        -2px -2px 2px 0px var(--shadow-light) inset;
+    transition: box-shadow 500ms ease;
+}
+
+.mobile-menu-btn:focus {
+    outline: none;
 }
 
 /* homepage styles */
