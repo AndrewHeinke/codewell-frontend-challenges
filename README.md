@@ -1,4 +1,4 @@
-# Codewell Frontend Challenges
+# Frontend Challenges
 
 ## [View Challenges Demos →](https://andrewheinke.github.io/codewell-frontend-challenges/)
 

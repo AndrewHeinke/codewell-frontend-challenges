@@ -65,6 +65,20 @@
                             <option value="4">Orange</option>
                             <option value="5">Dark</option>
                         </select>
+                        <div class="select-append">
+                            <svg
+                                aria-hidden="true"
+                                focusable="false"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"
+                                class="w-4 h-4"
+                            >
+                                <path
+                                    fill="currentColor"
+                                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                                ></path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
 
@@ -109,8 +123,8 @@
 
       Open: "block", closed: "hidden"
     -->
-        <div class="md:hidden" :class="showMenu ? 'block' : 'hidden'">
-            <div class="px-2 pt-2 pb-3 sm:px-3">
+        <div class="container md:hidden" :class="showMenu ? 'block' : 'hidden'">
+            <div class="py-3">
                 <router-link
                     v-for="(link, i) in links"
                     :key="i"
@@ -124,8 +138,8 @@
                         class="block px-3 py-2 rounded-md text-base font-medium"
                         :class="[
                             isExactActive
-                                ? 'text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700'
-                                : 'text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700',
+                                ? 'mobile-nav-link mobile-nav-link--active'
+                                : 'mobile-nav-link',
                             i > 0 && 'mt-1',
                         ]"
                         >{{ link.text }}</a
