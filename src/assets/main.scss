@@ -4,6 +4,11 @@
 
 @import 'tailwindcss/utilities';
 
+@mixin nav-link-shadow {
+    box-shadow: 2px 2px 2px 0px var(--shadow-dark) inset,
+        -2px -2px 2px 0px var(--shadow-light) inset;
+}
+
 :root {
     --bg-color: #eeeeee;
     --shadow-light: #ffffff;
@@ -75,6 +80,7 @@ input::-moz-placeholder {
 .nav-link:focus::after,
 .nav-link:hover::after,
 .nav-link--active::after {
+    @include nav-link-shadow;
     content: '';
     position: absolute;
     left: 0;
@@ -82,8 +88,6 @@ input::-moz-placeholder {
     right: 0;
     bottom: 0;
     border-radius: 0.25rem;
-    box-shadow: 2px 2px 2px 0px var(--shadow-dark) inset,
-        -2px -2px 2px 0px var(--shadow-light) inset;
     transition: box-shadow 500ms ease;
 }
 
@@ -104,6 +108,7 @@ input::-moz-placeholder {
 }
 
 .mobile-nav-link--active::after {
+    @include nav-link-shadow;
     content: '';
     position: absolute;
     left: 0;
@@ -111,8 +116,6 @@ input::-moz-placeholder {
     right: 0;
     bottom: 0;
     border-radius: 0.25rem;
-    box-shadow: 2px 2px 2px 0px var(--shadow-dark) inset,
-        -2px -2px 2px 0px var(--shadow-light) inset;
     transition: box-shadow 500ms ease;
 }
 
@@ -200,6 +203,7 @@ input::-moz-placeholder {
 
 .mobile-menu-btn:hover::after,
 .mobile-menu-btn:focus::after {
+    @include nav-link-shadow;
     content: '';
     position: absolute;
     left: 0;
@@ -207,8 +211,6 @@ input::-moz-placeholder {
     right: 0;
     bottom: 0;
     border-radius: 0.25rem;
-    box-shadow: 2px 2px 2px 0px var(--shadow-dark) inset,
-        -2px -2px 2px 0px var(--shadow-light) inset;
     transition: box-shadow 500ms ease;
 }
 

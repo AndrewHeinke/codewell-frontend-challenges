@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import './assets/main.css';
+import './assets/main.scss';
 import App from './App.vue';
 import { routes } from './routes.js';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -8,6 +8,9 @@ let base = process.env.NODE_ENV === 'production' ? '/codewell-frontend-challenge
 
 let app = createApp(App);
 let router = createRouter({
+    scrollBehavior() {
+        document.documentElement.scrollTop = 0;
+    },
     history: createWebHistory(base),
     routes: import.meta.hot ? [] : routes,
 });
