@@ -12,78 +12,50 @@
                             </svg>
                         </router-link>
                     </div>
-                    <div class="hidden pr-4 py-8">
-                        <div class="flex items-baseline ml-4">
-                            <router-link
-                                v-for="(link, i) in links"
-                                :key="i"
-                                :to="link.to"
-                                custom
-                                v-slot="{ navigate, href, isExactActive }"
-                            >
-                                <a
-                                    :href="href"
-                                    @click="navigate"
-                                    class="
-                                        px-3
-                                        py-2
-                                        whitespace-nowrap
-                                        text-base
-                                        font-medium
-                                        rounded-md
-                                    "
-                                    :class="[
-                                        isExactActive ? 'nav-link nav-link--active' : 'nav-link',
-                                        i > 0 && 'ml-4',
-                                    ]"
-                                    >{{ link.text }}</a
+                    <div class="flex ml-auto">
+                        <div class="select-wrapper">
+                            <div class="select-prepend">
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-4 h-4"
+                                    focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"
                                 >
-                            </router-link>
-                        </div>
-                    </div>
-                    <div class="select-wrapper">
-                        <div class="select-prepend">
-                            <svg
-                                aria-hidden="true"
-                                class="w-4 h-4"
-                                focusable="false"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"
-                            >
-                                <path
-                                    fill="currentColor"
-                                    d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
-                                ></path>
-                            </svg>
-                        </div>
-                        <label class="sr-only" for="theme-select">Set Theme</label>
-                        <select name="theme" id="theme-select">
-                            <optgroup label="Theme">
-                                <option value="0">Light</option>
-                                <option value="1">Blue</option>
-                                <option value="2">Green</option>
-                                <option value="3">Purple</option>
-                                <option value="4">Orange</option>
-                                <option value="5">Dark</option>
-                            </optgroup>
-                        </select>
-                        <div class="select-append">
-                            <svg
-                                aria-hidden="true"
-                                focusable="false"
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512"
-                                class="w-4 h-4"
-                            >
-                                <path
-                                    fill="currentColor"
-                                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-                                ></path>
-                            </svg>
+                                    <path
+                                        fill="currentColor"
+                                        d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <label class="sr-only" for="theme-select">Set Theme</label>
+                            <select name="theme" id="theme-select">
+                                <optgroup label="Theme">
+                                    <option value="0">Light</option>
+                                    <option value="1">Blue</option>
+                                    <option value="2">Green</option>
+                                    <option value="3">Purple</option>
+                                    <option value="4">Orange</option>
+                                    <option value="5">Dark</option>
+                                </optgroup>
+                            </select>
+                            <div class="select-append">
+                                <svg
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"
+                                    class="w-4 h-4"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                                    ></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="flex">
                     <!-- Mobile menu button -->
                     <button class="mobile-menu-btn" @click="showMenu = !showMenu">
@@ -150,7 +122,6 @@
             </div>
         </div>
     </nav>
-
     <router-view />
 </template>
 
