@@ -44,15 +44,23 @@ input::-moz-placeholder {
     @apply p-2 block rounded-md focus:outline-none;
 
     background: var(--bg-color);
-    box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
-        inset 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px var(--shadow-light);
+    box-shadow: 0px 0px 0px var(--link-color), 0px 0px 0px var(--shadow-dark),
+        0px 0px 0px var(--shadow-light), inset 0px 0px 0px var(--shadow-dark),
+        inset 0px 0px 0px var(--shadow-light);
     transition: background 500ms ease, box-shadow 500ms ease;
 }
 
-.main-nav-logo:focus,
 .main-nav-logo:hover {
-    box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
-        inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    box-shadow: 0 0 0 0px var(--link-color), 0px 0px 0px var(--shadow-dark),
+        0px 0px 0px var(--shadow-light), inset 5px 5px 10px var(--shadow-dark),
+        inset -5px -5px 10px var(--shadow-light);
+    transition: box-shadow 500ms ease;
+}
+
+.main-nav-logo:focus {
+    box-shadow: 0 0 0 2px var(--link-color), 0px 0px 0px var(--shadow-dark),
+        0px 0px 0px var(--shadow-light), inset 5px 5px 10px var(--shadow-dark),
+        inset -5px -5px 10px var(--shadow-light);
     transition: box-shadow 500ms ease;
     outline: none;
 }
@@ -247,8 +255,9 @@ input::-moz-placeholder {
 }
 
 .homepage-card {
-    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light),
-        inset 0px 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px 0px var(--shadow-light);
+    box-shadow: 0 0 0 0 var(--link-color), 4px 4px 8px var(--shadow-dark),
+        -4px -4px 8px var(--shadow-light), inset 0px 0px 0px 0px var(--shadow-dark),
+        inset 0px 0px 0px 0px var(--shadow-light);
     background-color: var(--bg-color);
     cursor: pointer;
     border: none;
@@ -256,10 +265,17 @@ input::-moz-placeholder {
     transition: box-shadow 500ms ease, background-color 500ms ease;
 }
 
-.homepage-card:hover,
+.homepage-card:hover {
+    box-shadow: 0 0 0 0 var(--link-color), 0px 0px 0px var(--shadow-dark),
+        0px 0px 0px var(--shadow-light), inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
+    transition: box-shadow 300ms ease;
+}
+
 .homepage-card:focus-within {
-    box-shadow: 0px 0px 0px var(--shadow-dark), 0px 0px 0px var(--shadow-light),
-        inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+    box-shadow: 0 0 0 2px var(--link-color), 0px 0px 0px var(--shadow-dark),
+        0px 0px 0px var(--shadow-light), inset 4px 4px 8px var(--shadow-dark),
+        inset -4px -4px 8px var(--shadow-light);
     transition: box-shadow 300ms ease;
 }
 

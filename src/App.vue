@@ -32,11 +32,14 @@
                             <select name="theme" id="theme-select">
                                 <optgroup label="Theme">
                                     <option value="0">Light</option>
-                                    <option value="1">Blue</option>
-                                    <option value="2">Green</option>
-                                    <option value="3">Purple</option>
-                                    <option value="4">Orange</option>
-                                    <option value="5">Dark</option>
+                                    <option value="1">Cream</option>
+                                    <option value="2">Blue</option>
+                                    <option value="3">Green</option>
+                                    <option value="4">Purple</option>
+                                    <option value="5">Orange</option>
+                                    <option value="6">Dark</option>
+                                    <option value="7">Dark 2</option>
+                                    <option value="8">Pink</option>
                                 </optgroup>
                             </select>
                             <div class="select-append">
