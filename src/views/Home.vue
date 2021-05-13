@@ -1,24 +1,27 @@
 <template>
     <main class="homepage">
         <div class="container py-6">
-            <div class="homepage-title-section rounded-xl p-8 text-center mb-16">
+            <div class="homepage-title-section mb-16 p-8 text-center rounded-xl">
                 <h1 class="homepage-title-heading">Front End Challenges</h1>
             </div>
-            <div class="card-container rounded-xl p-8">
-                <div class="clock">
-                    <div class="hand hours"></div>
-                    <div class="hand minutes"></div>
-                    <div class="hand seconds"></div>
-                    <div class="point"></div>
-                    <div class="marker">
-                        <span class="marker__1"></span>
-                        <span class="marker__2"></span>
-                        <span class="marker__3"></span>
-                        <span class="marker__4"></span>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="relative w-full rounded-lg p-4 group homepage-card">
+            <div class="card-container p-4 rounded-xl md:p-8">
+                <div
+                    class="
+                        grid
+                        gap-4
+                        grid-cols-1
+                        sm:grid-cols-2
+                        md:gap-8
+                        lg:grid-cols-3
+                        xl:grid-cols-4
+                    "
+                >
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
                         <router-link to="/Challenge1" class="homepage-card-link"
                             >Spense Landing Page</router-link
                         >
@@ -27,7 +30,12 @@
                             positioning and flex layouts.
                         </p>
                     </div>
-                    <div class="relative w-full rounded-lg p-4 group homepage-card">
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
                         <router-link to="/Challenge2" class="homepage-card-link"
                             >Fiber Landing Page</router-link
                         >
@@ -36,7 +44,12 @@
                             absolute positioning and sliders.
                         </p>
                     </div>
-                    <div class="relative w-full rounded-lg p-4 group homepage-card">
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
                         <router-link to="/Challenge3" class="homepage-card-link">
                             Gradie Sign Up Page
                         </router-link>
@@ -45,31 +58,87 @@
                             absolute positioning.
                         </p>
                     </div>
-                    <div class="relative w-full rounded-lg p-4 group homepage-card">
-                        <router-link to="/Challenge1" class="homepage-card-link"
-                            >Spense Landing Page</router-link
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
+                        <router-link to="/Challenge4" class="homepage-card-link"
+                            >IndieBrew Landing Page</router-link
                         >
                         <p class="homepage-card-text">
-                            Spence is a landing page for writers. Great for practicing absolute
-                            positioning and flex layouts.
+                            IndieBrew's template has a landing page and a sign up page. Great for
+                            general practice.
                         </p>
                     </div>
-                    <div class="relative w-full rounded-lg p-4 group homepage-card">
-                        <router-link to="/Challenge2" class="homepage-card-link"
-                            >Fiber Landing Page</router-link
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
+                        <router-link to="/Challenge5" class="homepage-card-link"
+                            >Snipper Landing Page</router-link
                         >
                         <p class="homepage-card-text">
-                            An online portfolio generator. Great to practice flex/grid layouts,
-                            absolute positioning and sliders.
+                            Snipper's a really fun project if you want some quick coding to do.
+                            Perfect for beginners.
                         </p>
                     </div>
-                    <div class="relative w-full rounded-lg p-4 group homepage-card">
-                        <router-link to="/Challenge3" class="homepage-card-link">
-                            Gradie Sign Up Page
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
+                        <router-link to="/Challenge6" class="homepage-card-link">
+                            Comment Module
                         </router-link>
                         <p class="homepage-card-text">
-                            Gradie is a simple sign up page, great to practice centering layouts and
-                            absolute positioning.
+                            A comment box with nested replies. Perfect for practicing positioning.
+                            Intermediate level.
+                        </p>
+                    </div>
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
+                        <router-link to="/Challenge7" class="homepage-card-link">
+                            Commune Waitlist Page
+                        </router-link>
+                        <p class="homepage-card-text">
+                            The perfect template for beginners to start working on their HTML and
+                            CSS skills.
+                        </p>
+                    </div>
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
+                        <router-link to="/Challenge8" class="homepage-card-link">
+                            TimeNow Landing Page
+                        </router-link>
+                        <p class="homepage-card-text">
+                            A 2-page template, perfect for practicing custom components and flex
+                            layouts.
+                        </p>
+                    </div>
+                    <div class="group homepage-card relative p-4 w-full rounded-lg">
+                        <img
+                            class="mb-4 rounded-md"
+                            src="http://via.placeholder.com/600x400"
+                            alt=""
+                        />
+                        <router-link to="/Challenge9" class="homepage-card-link">
+                            Unifeed Blog Page
+                        </router-link>
+                        <p class="homepage-card-text">
+                            A blog page perfect for practicing both Flex and Grid. Beginner level.
                         </p>
                     </div>
                 </div>

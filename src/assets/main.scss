@@ -120,7 +120,7 @@ input::-moz-placeholder {
 }
 
 .select-wrapper {
-    @apply flex flex-wrap items-stretch ml-auto mr-4 md:mr-0 relative rounded-lg;
+    @apply flex flex-wrap items-stretch ml-auto mr-4 relative rounded-lg;
     background: var(--bg-color);
     box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light),
         inset 0px 0px 0px var(--shadow-dark), inset 0px 0px 0px var(--shadow-light);
@@ -129,6 +129,7 @@ input::-moz-placeholder {
     display: flex;
     padding: 0.25rem 0;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 
 .select-wrapper:focus-within {
@@ -263,7 +264,7 @@ input::-moz-placeholder {
 }
 
 .homepage-card-link {
-    @apply inline-flex items-center font-semibold text-lg cursor-pointer outline-none;
+    @apply inline-flex items-center font-semibold text-base md:text-lg cursor-pointer outline-none;
     color: var(--link-color);
     transition: color 500ms ease;
 }
@@ -274,7 +275,7 @@ input::-moz-placeholder {
 }
 
 .homepage-card-text {
-    @apply my-1;
+    @apply my-1 text-sm md:text-base;
     color: var(--text-color);
     transition: color 500ms ease;
 }

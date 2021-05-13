@@ -12,8 +12,8 @@
                             </svg>
                         </router-link>
                     </div>
-                    <div class="hidden md:block py-8 pr-4">
-                        <div class="ml-4 flex items-baseline">
+                    <div class="hidden pr-4 py-8">
+                        <div class="flex items-baseline ml-4">
                             <router-link
                                 v-for="(link, i) in links"
                                 :key="i"
@@ -27,10 +27,10 @@
                                     class="
                                         px-3
                                         py-2
-                                        rounded-md
+                                        whitespace-nowrap
                                         text-base
                                         font-medium
-                                        whitespace-nowrap
+                                        rounded-md
                                     "
                                     :class="[
                                         isExactActive ? 'nav-link nav-link--active' : 'nav-link',
@@ -84,7 +84,7 @@
                     </div>
                 </div>
 
-                <div class="flex md:hidden">
+                <div class="flex">
                     <!-- Mobile menu button -->
                     <button class="mobile-menu-btn" @click="showMenu = !showMenu">
                         <!-- Menu open: "hidden", Menu closed: "block" -->
@@ -125,7 +125,7 @@
 
       Open: "block", closed: "hidden"
     -->
-        <div class="container md:hidden" :class="showMenu ? 'block' : 'hidden'">
+        <div class="container" :class="showMenu ? 'block' : 'hidden'">
             <div class="py-3">
                 <router-link
                     v-for="(link, i) in links"
@@ -137,7 +137,7 @@
                     <a
                         :href="href"
                         @click="navigate().then(() => (showMenu = false))"
-                        class="block px-3 py-2 rounded-md text-base font-medium"
+                        class="block px-3 py-2 text-base font-medium rounded-md"
                         :class="[
                             isExactActive
                                 ? 'mobile-nav-link mobile-nav-link--active'
@@ -165,6 +165,12 @@ export default defineComponent({
             { text: 'Challenge 1', to: '/Challenge1' },
             { text: 'Challenge 2', to: '/Challenge2' },
             { text: 'Challenge 3', to: '/Challenge3' },
+            { text: 'Challenge 4', to: '/Challenge4' },
+            { text: 'Challenge 5', to: '/Challenge5' },
+            { text: 'Challenge 6', to: '/Challenge6' },
+            { text: 'Challenge 7', to: '/Challenge7' },
+            { text: 'Challenge 8', to: '/Challenge8' },
+            { text: 'Challenge 9', to: '/Challenge9' },
         ],
     }),
     mounted() {
